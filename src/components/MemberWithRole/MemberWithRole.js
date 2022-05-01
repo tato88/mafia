@@ -5,23 +5,44 @@ const MemberWithRole = ({member}) => {
 
     const choosenCitizen = (e) => {
         e.preventDefault()
-        member.role = 'citizen'
-        console.log(member)
+        const membersCheck = JSON.parse(localStorage.getItem('members')) || []
+        for (const memberCheck of membersCheck) {
+            if (memberCheck.name === member.name) {
+                memberCheck.role = 'citizen'
+                localStorage.setItem('members', JSON.stringify(membersCheck))
+            }
+        }
+
     }
     const choosenMafia = (e) => {
         e.preventDefault()
-        member.role = 'mafia'
-        console.log(member)
+        const membersCheck = JSON.parse(localStorage.getItem('members')) || []
+        for (const memberCheck of membersCheck) {
+            if (memberCheck.name === member.name) {
+                memberCheck.role = 'mafia'
+                localStorage.setItem('members', JSON.stringify(membersCheck))
+            }
+        }
     }
     const choosenDoctor = (e) => {
         e.preventDefault()
-        member.role = 'doctor'
-        console.log(member)
+        const membersCheck = JSON.parse(localStorage.getItem('members')) || []
+        for (const memberCheck of membersCheck) {
+            if (memberCheck.name === member.name) {
+                memberCheck.role = 'doctor'
+                localStorage.setItem('members', JSON.stringify(membersCheck))
+            }
+        }
     }
     const choosenPolice = (e) => {
         e.preventDefault()
-        member.role = 'police'
-        console.log(member)
+        const membersCheck = JSON.parse(localStorage.getItem('members')) || []
+        for (const memberCheck of membersCheck) {
+            if (memberCheck.name === member.name) {
+                memberCheck.role = 'police'
+                localStorage.setItem('members', JSON.stringify(membersCheck))
+            }
+        }
     }
 
     return (

@@ -1,7 +1,7 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 
 
-const MembersPage = ({setMembersArrayForRole}) => {
+const MembersPage = () => {
     const membersArr = JSON.parse(localStorage.getItem('members')) || []
     const [members, setMembers] = useState([...membersArr])
 
@@ -14,7 +14,6 @@ const MembersPage = ({setMembersArrayForRole}) => {
             localStorage.setItem('members', JSON.stringify(membersArr))
             e.target.reset()
             setMembers(membersArr)
-            setMembersArrayForRole(membersArr)
         }
     }
 
@@ -26,7 +25,6 @@ const MembersPage = ({setMembersArrayForRole}) => {
             const membersArr = []
             localStorage.setItem('members', JSON.stringify(membersArr))
             setMembers(membersArr)
-            setMembersArrayForRole(membersArr)
 
         }
 
