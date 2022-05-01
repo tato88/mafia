@@ -3,13 +3,15 @@ import React from 'react';
 import css from './NightPage.module.css'
 
 const NightPage = () => {
+
+    const members = JSON.parse(localStorage.getItem('members')) || []
+
+
     return (
         <div>
             <ul>
 
-                <li>1 <button>KILL</button></li>
-                <li>2 <button>KILL</button></li>
-                <li>3 <button>KILL</button></li>
+                {members && members.map(member=><li key={member.name}>{member.name} <button>KILL</button></li>)}
             </ul>
         </div>
     );
