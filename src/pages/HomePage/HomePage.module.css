@@ -1,0 +1,12 @@
+.newGameBut{
+    height: 100px;
+    width: 200px;
+    border-radius: 10px;
+    color: red;
+    font-size: 30px;
+    cursor: pointer;
+}
+.newGameBut:hover{
+    background: red;
+    color: snow;
+}

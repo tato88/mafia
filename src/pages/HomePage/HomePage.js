@@ -1,9 +1,11 @@
 import React from 'react';
+import css from './HomePage.module.css'
 
 const HomePage = () => {
     return (
         <div>
-            HomePage
+            {/*clear localStorage button*/}
+            <button className={css.newGameBut}>NEW GAME</button>
         </div>
     );
 };

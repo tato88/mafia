@@ -1,0 +1,41 @@
+form button {
+    margin: 10px;
+    border-radius: 10px;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+
+
+.citizenBut {
+    background: lightgray;
+}
+.citizenBut:hover {
+    color: lightgray;
+    background: darkslategray;
+}
+
+.mafiaBut {
+    background: red;
+}
+.mafiaBut:hover {
+    color: red;
+    background: black;
+}
+
+
+.doctorBut {
+    background: snow;
+    border: 1px solid black;
+}
+.doctorBut:hover{
+    color: red;
+}
+
+.policeBut {
+    background: deepskyblue;
+}
+.policeBut:hover{
+    color: red;
+    font-weight: bolder;
+}

@@ -3,7 +3,7 @@ import React from 'react';
 const DayPage = () => {
     return (
         <div>
-            DayPage
+            RESULTS OF NIGHTS MOVES
         </div>
     );
 };
