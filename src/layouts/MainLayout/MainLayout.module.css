@@ -1,0 +1,18 @@
+.header {
+    min-height: 50px;
+    background-color: lightblue;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.header a {
+    cursor: pointer;
+    text-decoration: none;
+    color: darkolivegreen;
+    font-size: 22px;
+}
+
+.header a[class='active'] {
+    color: red;
+}
