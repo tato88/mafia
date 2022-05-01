@@ -1,11 +1,15 @@
 import React from 'react';
 import css from './HomePage.module.css'
 
+const backToAllMembers = () => {
+    console.log('BACK TO ALL MEMBERS LIST')
+}
+
 const HomePage = () => {
     return (
         <div>
-            {/*clear localStorage button*/}
-            <button className={css.newGameBut}>NEW GAME</button>
+            {/*back to all members button*/}
+            <button className={css.newGameBut} onClick={backToAllMembers}>NEW GAME</button>
         </div>
     );
 };

@@ -1,18 +1,13 @@
 import React from 'react';
 
 import css from './RolePage.module.css'
+import MemberWithRole from "../../components/MemberWithRole/MemberWithRole";
 
-const RolePage = () => {
+const RolePage = ({membersArrayForRole}) => {
+    const members = membersArrayForRole
     return (
         <div>
-            NAME
-            Choose Your Role:
-            <form>
-                <button className={css.citizenBut}>CITIZEN</button>
-                <button className={css.mafiaBut}>MAFIA</button>
-                <button className={css.doctorBut}>DOCTOR</button>
-                <button className={css.policeBut}>POLICE</button>
-            </form>
+            {members && members.map(member=><MemberWithRole key={member.name} member={member}/>)}
         </div>
     );
 };

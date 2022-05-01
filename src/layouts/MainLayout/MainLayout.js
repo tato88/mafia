@@ -1,9 +1,10 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import css from './MainLayout.module.css'
-import {Outlet,NavLink} from "react-router-dom"
+import {Outlet, NavLink} from "react-router-dom"
 
 const MainLayout = () => {
+
     return (
         <div>
             <div className={css.header}>

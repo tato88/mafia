@@ -1,24 +1,53 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 
-const MembersPage = () => {
+
+const MembersPage = ({setMembersArrayForRole}) => {
+    const membersArr = JSON.parse(localStorage.getItem('members')) || []
+    const [members, setMembers] = useState([...membersArr])
+
+
+    //function add member to localstorage
+    const addMebmer = (e) => {
+        e.preventDefault()
+        if (e.target.name.value) {
+            membersArr.push({'name': e.target.name.value})
+            localStorage.setItem('members', JSON.stringify(membersArr))
+            e.target.reset()
+            setMembers(membersArr)
+            setMembersArrayForRole(membersArr)
+        }
+    }
+
+
+    //function to clear localstorage
+    const resetBut = () => {
+        const resetConfirm = window.confirm("are you sure ?")
+        if (resetConfirm) {
+            const membersArr = []
+            localStorage.setItem('members', JSON.stringify(membersArr))
+            setMembers(membersArr)
+            setMembersArrayForRole(membersArr)
+
+        }
+
+    }
+
     return (
         <div>
-            <form>
-                <input type={"text"}/>
+            <form id={'form'} onSubmit={addMebmer}>
+                <input name={'name'} type={"text"}/>
                 <button>ADD</button>
             </form>
             <hr/>
             <hr/>
             <hr/>
             <ul>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
+                {members && members.map(member => <li key={member.name}>{member.name}</li>)}
             </ul>
             <hr/>
             <hr/>
             <hr/>
-            <button>RESET</button>
+            <button onClick={resetBut}>RESET</button>
         </div>
     );
 };
