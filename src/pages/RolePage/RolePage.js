@@ -1,6 +1,6 @@
-import React from 'react';
-
+import css from "./RolePage.module.css";
 import MemberWithRole from "../../components/MemberWithRole/MemberWithRole";
+
 
 
 const RolePage = () => {
@@ -14,3 +14,4 @@ const RolePage = () => {
 };
 
 export default RolePage;
+

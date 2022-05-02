@@ -2,7 +2,11 @@ import React from 'react';
 import css from './HomePage.module.css'
 
 const backToAllMembers = () => {
-    console.log('BACK TO ALL MEMBERS LIST')
+    const resetConfirm = window.confirm("are you sure ?")
+    if (resetConfirm) {
+        const basket = JSON.parse(localStorage.getItem('basket')) || []
+        localStorage.setItem('members', JSON.stringify(basket))
+    }
 }
 
 const HomePage = () => {

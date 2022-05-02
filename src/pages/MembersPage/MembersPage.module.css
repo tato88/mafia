@@ -1,0 +1,14 @@
+.ulStartBut{
+    display: flex;
+}
+.ulStartBut * {
+    margin: 10px;
+}
+.membersPageBut{
+    cursor: pointer;
+    color: snow;
+    background: deeppink;
+    border: 0 solid gray;
+    border-radius: 10px;
+    height: 50px;
+}

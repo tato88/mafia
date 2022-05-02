@@ -1,17 +1,24 @@
-import React from 'react';
-
-import css from './NightPage.module.css'
+import React, {useState} from 'react';
 
 const NightPage = () => {
+    const membersArr = JSON.parse(localStorage.getItem('members')) || []
+    const [members, setMembers] = useState([...membersArr])
 
-    const members = JSON.parse(localStorage.getItem('members')) || []
-
+    //
+    const kill = (e) => {
+        e.preventDefault()
+    //     const membersWithOutDeadman = members.filter(player => player.name !== e.target.value)
+    //     console.log(membersWithOutDeadman);
+    //     localStorage.setItem('members', JSON.stringify(membersWithOutDeadman))
+    }
 
     return (
         <div>
             <ul>
 
-                {members && members.map(member=><li key={member.name}>{member.name} <button>KILL</button></li>)}
+                {members && members.map(member => <li key={member.name}>{member.name}
+                    <button value={member.name} onClick={kill}>KILL</button>
+                </li>)}
             </ul>
         </div>
     );

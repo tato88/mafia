@@ -6,10 +6,10 @@ form button {
 }
 
 
-
 .citizenBut {
     background: lightgray;
 }
+
 .citizenBut:hover {
     color: lightgray;
     background: darkslategray;
@@ -18,6 +18,7 @@ form button {
 .mafiaBut {
     background: red;
 }
+
 .mafiaBut:hover {
     color: red;
     background: black;
@@ -28,14 +29,28 @@ form button {
     background: snow;
     border: 1px solid black;
 }
-.doctorBut:hover{
+
+.doctorBut:hover {
     color: red;
 }
 
 .policeBut {
     background: deepskyblue;
 }
-.policeBut:hover{
+
+.policeBut:hover {
     color: red;
     font-weight: bolder;
+}
+
+.nextPrevMemb {
+    margin: 10px;
+    height: 50px;
+    width: 100px;
+    border: 1px solid snow;
+    border-radius: 5px;
+    color: brown;
+    font-family: "Courier New", serif;
+    font-weight: bolder;
+    cursor: pointer;
 }

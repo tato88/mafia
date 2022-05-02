@@ -6,6 +6,8 @@ import RolePage from "./pages/RolePage/RolePage";
 import NightPage from "./pages/NightPage/NightPage";
 import DayPage from "./pages/DayPage/DayPage";
 
+import css from './App.css'
+
 function App() {
     return (
         <div>

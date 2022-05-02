@@ -1,9 +1,16 @@
 import React, {useState} from 'react';
 
+import css from './MembersPage.module.css'
 
 const MembersPage = () => {
     const membersArr = JSON.parse(localStorage.getItem('members')) || []
     const [members, setMembers] = useState([...membersArr])
+
+//function basket for New Game on HomePage
+    const basketBut = (e) => {
+        e.preventDefault()
+        localStorage.setItem('basket', JSON.stringify(membersArr))
+    }
 
 
     //function add member to localstorage
@@ -39,13 +46,16 @@ const MembersPage = () => {
             <hr/>
             <hr/>
             <hr/>
-            <ul>
-                {members && members.map(member => <li key={member.name}>{member.name}</li>)}
-            </ul>
+            <div className={css.ulStartBut}>
+                <ul>
+                    {members && members.map(member => <li key={member.name}>{member.name}</li>)}
+                </ul>
+                <button className={css.membersPageBut} onClick={basketBut}>START GAME</button>
+            </div>
             <hr/>
             <hr/>
             <hr/>
-            <button onClick={resetBut}>RESET</button>
+            <button className={css.membersPageBut} onClick={resetBut}>RESET</button>
         </div>
     );
 };
