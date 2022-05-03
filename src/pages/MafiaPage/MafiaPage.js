@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import css from "../DoctorPage/DoctorPage.module.css";
 
 const MafiaPage = () => {
     const membersArr = JSON.parse(localStorage.getItem('members')) || []
@@ -12,23 +13,29 @@ const MafiaPage = () => {
                 if (resetConfirm) {
                     player.status = 'killed'
                     localStorage.setItem('members', JSON.stringify(membersArr))
-                    window.history.back()
+                    window.location.replace('/night')
                 }
             }
         })
     }
-
     return (
         <div>
-            <ul>
+            <div className={css.healVSlogo}>
+                <div>
+                    <ul>
 
-                {members && members.map(member =>
-                    <li key={member.name}>{member.name}
-                        <button value={member.name} onClick={kill}>KILL</button>
-                    </li>)}
-            </ul>
-
-
+                        {members && members.map(member =>
+                            <li key={member.name}>{member.name}
+                                <button value={member.name} onClick={kill}>KILL</button>
+                            </li>)}
+                    </ul>
+                </div>
+                <div>
+                    <img className={css.medicLogo}
+                         src="https://us.123rf.com/450wm/skovoroda/skovoroda1104/skovoroda110400015/9324149-mafia-che-mira-a-target-con-iscrizione-illustrazione-su-sfondo-nero.jpg?ver=6"
+                         alt="medic-logo"/>
+                </div>
+            </div>
         </div>
     );
 };
