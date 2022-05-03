@@ -10,19 +10,19 @@ form button {
     background: lightgray;
 }
 
-.citizenBut:hover {
-    color: lightgray;
-    background: darkslategray;
-}
+/*.citizenBut:hover {*/
+/*    color: lightgray;*/
+/*    background: darkslategray;*/
+/*}*/
 
 .mafiaBut {
     background: red;
 }
 
-.mafiaBut:hover {
-    color: red;
-    background: black;
-}
+/*.mafiaBut:hover {*/
+/*    color: red;*/
+/*    background: black;*/
+/*}*/
 
 
 .doctorBut {
@@ -30,18 +30,18 @@ form button {
     border: 1px solid black;
 }
 
-.doctorBut:hover {
-    color: red;
-}
+/*.doctorBut:hover {*/
+/*    color: red;*/
+/*}*/
 
 .policeBut {
     background: deepskyblue;
 }
 
-.policeBut:hover {
-    color: red;
-    font-weight: bolder;
-}
+/*.policeBut:hover {*/
+/*    color: red;*/
+/*    font-weight: bolder;*/
+/*}*/
 
 .nextPrevMemb {
     margin: 10px;

@@ -11,7 +11,7 @@ const MemberWithRole = ({member}) => {
     }
 
     const setRole = (eTargetValue) => {
-        const resetConfirm = window.confirm("are you sure ?")
+        const resetConfirm = window.confirm(`!!!   ${eTargetValue}   !!! ARE YOU SHURE ???`)
         if (resetConfirm) {
             const membersCheck = JSON.parse(localStorage.getItem('members')) || []
             for (const memberCheck of membersCheck) {
