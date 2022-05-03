@@ -8,11 +8,11 @@ const MainLayout = () => {
     return (
         <div>
             <div className={css.header}>
-                <NavLink to="/home">Home</NavLink>
-                <NavLink to="/members">Members</NavLink>
-                <NavLink to="/role">Role</NavLink>
-                <NavLink to="/night">Night</NavLink>
-                <NavLink to="/day">Day</NavLink>
+                <NavLink to="home">Home</NavLink>
+                <NavLink to="members">Members</NavLink>
+                <NavLink to="role">Role</NavLink>
+                <NavLink to="night">Night</NavLink>
+                <NavLink to="day">Day</NavLink>
             </div>
             <hr/>
             <Outlet/>

@@ -4,3 +4,22 @@ body button{
     color: darkred;
     border: 1px solid darkred;
 }
+.nightHeader{
+    min-height: 50px;
+    background-color: yellowgreen;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.nightHeader a {
+    cursor: pointer;
+    text-decoration: none;
+    color: brown;
+    font-size: 22px;
+}
+.nightHeader a[class='active'] {
+    color: snow;
+    border: 2px solid snow;
+    border-radius: 5px;
+    padding: 7px;
+}
