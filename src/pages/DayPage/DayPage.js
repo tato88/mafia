@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import DayResults from "../../components/DayResults/DayResults";
 
 const DayPage = () => {
     const membersArr = JSON.parse(localStorage.getItem('members')) || []
@@ -11,13 +10,11 @@ const DayPage = () => {
         const deadMan = membersArr.filter(player => player.status === 'killed') || []
         const medicMan = membersArr.filter(player => player.status === 'medic') || []
         e.preventDefault()
-        if (deadMan.length > 0) {
-            console.log(deadMan);
-            setTTT(deadMan)
-        }
         if (medicMan.length > 0){
-            console.log(medicMan);
             setTTT(medicMan)
+        }
+        if (deadMan.length > 0) {
+            setTTT(deadMan)
         }
     }
 

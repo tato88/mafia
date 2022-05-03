@@ -15,7 +15,7 @@ const DoctorPage = () => {
                 if (resetConfirm) {
                     player.status = 'medic'
                     localStorage.setItem('members', JSON.stringify(membersArr))
-                    window.location.replace('/night')
+                    window.history.back()
                 }
             }
         })

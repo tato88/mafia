@@ -1,0 +1,9 @@
+.policeVSlogo {
+    display: flex;
+    justify-content: space-around;
+}
+
+.policeLogo {
+    background-color: transparent;
+    height: 300px;
+}

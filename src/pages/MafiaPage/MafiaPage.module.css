@@ -1,0 +1,9 @@
+.mafiaVSlogo {
+    display: flex;
+    justify-content: space-around;
+}
+
+.mafiaLogo {
+    background-color: transparent;
+    height: 300px;
+}

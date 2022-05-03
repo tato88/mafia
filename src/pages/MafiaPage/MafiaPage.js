@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import css from "../DoctorPage/DoctorPage.module.css";
+import css from './MafiaPage.module.css'
 
 const MafiaPage = () => {
     const membersArr = JSON.parse(localStorage.getItem('members')) || []
@@ -13,14 +13,15 @@ const MafiaPage = () => {
                 if (resetConfirm) {
                     player.status = 'killed'
                     localStorage.setItem('members', JSON.stringify(membersArr))
-                    window.location.replace('/night')
+                    // window.location.replace('/night')
+                    window.history.back()
                 }
             }
         })
     }
     return (
         <div>
-            <div className={css.healVSlogo}>
+            <div className={css.mafiaVSlogo}>
                 <div>
                     <ul>
 
@@ -31,7 +32,7 @@ const MafiaPage = () => {
                     </ul>
                 </div>
                 <div>
-                    <img className={css.medicLogo}
+                    <img className={css.mafiaLogo}
                          src="https://us.123rf.com/450wm/skovoroda/skovoroda1104/skovoroda110400015/9324149-mafia-che-mira-a-target-con-iscrizione-illustrazione-su-sfondo-nero.jpg?ver=6"
                          alt="medic-logo"/>
                 </div>
