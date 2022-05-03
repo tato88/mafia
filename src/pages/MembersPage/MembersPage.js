@@ -50,7 +50,7 @@ const MembersPage = () => {
                 <ul>
                     {members && members.map(member => <li key={member.name}>{member.name}</li>)}
                 </ul>
-                <button className={css.membersPageBut} onClick={basketBut}>START GAME</button>
+                <button className={css.membersPageBut} onClick={basketBut}>SAVE SQUAD</button>
             </div>
             <hr/>
             <hr/>
