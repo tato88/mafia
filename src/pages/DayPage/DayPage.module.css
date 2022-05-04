@@ -1,0 +1,20 @@
+.showNightBut {
+    height: 40px;
+    font-size: 25px;
+    background: darkred;
+    color: silver;
+    border: 1px solid darkred;
+    cursor: pointer;
+}
+.showNightBut:hover{
+    background: silver;
+    color: darkred;
+}
+
+.nextDayBut {
+    height: 25px;
+    border: none;
+    background: moccasin;
+    font-family: "Comic Sans MS", cursive;
+    cursor: pointer;
+}

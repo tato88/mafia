@@ -1,10 +1,27 @@
-.ulStartBut{
+.membersPageContentCentr form{
+    width: 400px;
+    box-sizing: border-box;
+}
+.membersPageContentCentr hr{
+    width: 100%;
+}
+.membersPageContentCentr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.ulStartBut {
     display: flex;
 }
+
 .ulStartBut * {
     margin: 10px;
 }
-.membersPageBut{
+
+.membersPageBut {
     cursor: pointer;
     color: snow;
     background: deeppink;

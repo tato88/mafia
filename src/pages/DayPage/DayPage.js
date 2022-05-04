@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 
+import css from './DayPage.module.css'
+
 const DayPage = () => {
     const membersArr = JSON.parse(localStorage.getItem('members')) || []
 
@@ -39,11 +41,11 @@ const DayPage = () => {
         <div>
             {ttt && ttt.map(member =>
                 <div key={member.name}>{member.status} <strong>{member.name}</strong></div>)}
-            <button onClick={showNightMoves}>SHOW NIGHT MOVES</button>
+            <button className={css.showNightBut} onClick={showNightMoves}>SHOW NIGHT MOVES</button>
             <hr/>
             <hr/>
             <hr/>
-            <button onClick={nextDay}>NEXT DAY</button>
+            <button className={css.nextDayBut} onClick={nextDay}>NEXT DAY</button>
         </div>
     );
 };

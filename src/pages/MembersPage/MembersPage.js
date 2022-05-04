@@ -39,23 +39,25 @@ const MembersPage = () => {
 
     return (
         <div>
-            <form id={'form'} onSubmit={addMebmer}>
-                <input name={'name'} type={"text"}/>
-                <button>ADD</button>
-            </form>
-            <hr/>
-            <hr/>
-            <hr/>
-            <div className={css.ulStartBut}>
-                <ul>
-                    {members && members.map(member => <li key={member.name}>{member.name}</li>)}
-                </ul>
-                <button className={css.membersPageBut} onClick={basketBut}>SAVE SQUAD</button>
+            <div className={css.membersPageContentCentr}>
+                <form id={'form'} onSubmit={addMebmer}>
+                    <input name={'name'} type={"text"}/>
+                    <button>ADD</button>
+                </form>
+                <hr/>
+                <hr/>
+                <hr/>
+                <div className={css.ulStartBut}>
+                    <ul>
+                        {members && members.map(member => <li key={member.name}>{member.name}</li>)}
+                    </ul>
+                    <button className={css.membersPageBut} onClick={basketBut}>SAVE SQUAD</button>
+                </div>
+                <hr/>
+                <hr/>
+                <hr/>
+                <button className={css.membersPageBut} onClick={resetBut}>RESET</button>
             </div>
-            <hr/>
-            <hr/>
-            <hr/>
-            <button className={css.membersPageBut} onClick={resetBut}>RESET</button>
         </div>
     );
 };

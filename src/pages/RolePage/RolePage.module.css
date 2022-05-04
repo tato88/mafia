@@ -54,3 +54,7 @@ form button {
     font-weight: bolder;
     cursor: pointer;
 }
+
+.rolePageItemsCentr{
+    text-align: center;
+}
